@@ -1,4 +1,7 @@
-﻿using OpenQA.Selenium;
+﻿using AventStack.ExtentReports;
+using AventStack.ExtentReports.Gherkin.Model;
+using AventStack.ExtentReports.Reporter;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +20,11 @@ namespace Selenium
         [Given(@"I am on the automation website")]
         public void GivenIAmOnTheAutomationWebsite()
         {
+
+            
+
+           
+
             driver.Url = "http://automationpractice.com";
             log.Info("Navigated to website");
             
