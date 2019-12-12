@@ -25,7 +25,7 @@ namespace Selenium
         [When(@"I press sign")]
         public void WhenIPressSign()
         {
-            //ScenarioContext.Current.Pending();
+            //ScenarioContext.Current.Pending();  
         }
 
         [When(@"enter my username")]
