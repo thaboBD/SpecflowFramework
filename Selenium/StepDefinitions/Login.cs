@@ -1,7 +1,9 @@
 ﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
+using NUnit.Framework;
 using OpenQA.Selenium;
+using Selenium.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,14 +22,20 @@ namespace Selenium
         [Given(@"I am on the automation website")]
         public void GivenIAmOnTheAutomationWebsite()
         {
-
             
+                driver.Url = "http://automationpractice.com";
+                log.Info("Navigated to website");
+                //log.Info(driver.Title);
+               // Assert.AreEqual("My Storex", driver.Title);
+                Assert.AreEqual("team", "tom");
+                //string path = WebDriverFactory.TakeScreenshot();
+                //log.Info(path);
+                //WebDriverFactory.TakeScreenshot();
 
            
-
-            driver.Url = "http://automationpractice.com";
-            log.Info("Navigated to website");
+               // log.Error("failed test validation");
             
+
         }
 
         [When(@"I press sign")]

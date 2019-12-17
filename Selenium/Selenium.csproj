@@ -121,19 +121,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjects\LandingPage.cs" />
+    <Compile Include="PageObjects\LoginPage.cs" />
+    <Compile Include="PageObjects\RegistrationPage.cs" />
     <Compile Include="StepDefinitions\Hooks.cs" />
     <Compile Include="StepDefinitions\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepDefinitions\UserRegistrationSteps.cs" />
+    <Compile Include="Utils\ScreenshotFactory.cs" />
     <Compile Include="Utils\WebDriverFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Features\login.feature" />
+    <None Include="Features\UserRegistration.feature" />
     <None Include="license" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="extent-config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestData\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
