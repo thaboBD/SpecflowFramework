@@ -121,9 +121,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjects\ContactUsPage.cs" />
     <Compile Include="PageObjects\LandingPage.cs" />
     <Compile Include="PageObjects\LoginPage.cs" />
     <Compile Include="PageObjects\RegistrationPage.cs" />
+    <Compile Include="StepDefinitions\ContactUsSteps.cs" />
     <Compile Include="StepDefinitions\Hooks.cs" />
     <Compile Include="StepDefinitions\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Features\ContactUs.feature" />
     <None Include="Features\login.feature" />
     <None Include="Features\UserRegistration.feature" />
     <None Include="license" />

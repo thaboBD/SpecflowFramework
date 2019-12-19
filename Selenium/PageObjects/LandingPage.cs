@@ -24,11 +24,18 @@ namespace Selenium.PageObjects
 
         [FindsBy(How = How.XPath, Using = "//nav/div[2]/a")]
         public IWebElement signoutBtn { get; set; }
-
+        
+        [FindsBy(How = How.XPath, Using = "//div[@id='contact-link']/a")]
+        public IWebElement contactUsBtn { get; set; }
 
         public void clickSignin()
         {
             signinBtn.Click();
+        }
+
+        public void clickContactUs()
+        {
+            contactUsBtn.Click();
         }
 
 
