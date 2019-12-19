@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using Selenium.TestData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,11 +28,35 @@ namespace Selenium.PageObjects
         [FindsBy(How = How.Id, Using = "SubmitCreate")]
         public IWebElement creatEmailBtn { get; set; }
 
+        [FindsBy(How = How.Id, Using = "email")]
+        public IWebElement emailSignin { get; set; }
+
+        [FindsBy(How = How.Id, Using = "passwd")]
+        public IWebElement passwordSignin { get; set; }
+        
+
+        [FindsBy(How = How.Id, Using = "SubmitLogin")]
+        public IWebElement loginBtn { get; set; }
+
 
         //Methods
+        public void signIn()
+        {
+            Data n = new Data();
+            emailSignin.SendKeys(n.Email);
+            passwordSignin.SendKeys(n.Password);
+            loginBtn.Click();
+        }
+
         public void enterEmail(String email)
         {
-            emailInput.SendKeys(email);
+            Random rnd = new Random();
+            int num = rnd.Next(10000);
+            string userEmail = num + email;
+            emailInput.SendKeys(userEmail);
+
+            Data n = new Data();
+            n.Email = userEmail;
         }
 
         public void clickCreateEmail()

@@ -17,10 +17,26 @@ namespace Selenium.PageObjects
         {
             driver = webDriver;
             PageFactory.InitElements(driver, this);
-            
         }
 
         [FindsBy(How = How.XPath, Using = "//nav/div[1]/a")]
         public IWebElement signinBtn { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//nav/div[2]/a")]
+        public IWebElement signoutBtn { get; set; }
+
+
+        public void clickSignin()
+        {
+            signinBtn.Click();
+        }
+
+
+        public void clickSignout()
+        {
+            signoutBtn.Click();
+        }
     }
+
+   
 }

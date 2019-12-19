@@ -12,6 +12,7 @@ Scenario: Create an account
 	And the user enters a passoword
 	And the user enters an address
 	And the user enters a city
+	And the user enters the state
 	And the user enters a postcode
 	And the user enters a phone number
 	Then I can create an account to log in
