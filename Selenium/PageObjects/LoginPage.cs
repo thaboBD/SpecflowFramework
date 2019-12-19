@@ -48,6 +48,13 @@ namespace Selenium.PageObjects
             loginBtn.Click();
         }
 
+        public void signIn(string user, string passwrd)
+        {
+            emailSignin.SendKeys(user);
+            passwordSignin.SendKeys(passwrd);
+            loginBtn.Click();
+        }
+
         public void enterEmail(String email)
         {
             Random rnd = new Random();

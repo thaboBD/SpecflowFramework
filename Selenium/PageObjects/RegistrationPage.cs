@@ -87,6 +87,7 @@ namespace Selenium.PageObjects
             Data n = new Data();
             n.Password = pword;
             passwordField.SendKeys(pword);
+            
         }
 
         public void typeLName(string lName)
