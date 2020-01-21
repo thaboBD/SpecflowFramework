@@ -49,6 +49,9 @@ namespace Selenium.StepDefinitions
             
         }
 
+
+        //Issue with reporting to fix here
+
         [AfterStep]
         public void InsertReportingSteps(ScenarioContext s)
         {
@@ -72,6 +75,7 @@ namespace Selenium.StepDefinitions
             }
             else if(s.TestError != null)
             {
+
 
                 if(stepType =="Given")
                     scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text).Fail(s.TestError.InnerException);

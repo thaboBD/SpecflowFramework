@@ -28,6 +28,18 @@ namespace Selenium.PageObjects
         [FindsBy(How = How.XPath, Using = "//div[@id='contact-link']/a")]
         public IWebElement contactUsBtn { get; set; }
 
+        [FindsBy(How = How.Id, Using = "search_query_top")]
+        public IWebElement searchBox { get; set; }
+
+
+        public void search(string searchText)
+        {
+            searchBox.SendKeys(searchText);
+            searchBox.SendKeys(Keys.Enter);
+        }
+
+        
+
         public void clickSignin()
         {
             signinBtn.Click();

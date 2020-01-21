@@ -15,7 +15,7 @@ namespace Selenium.StepDefinitions
     public class ContactUsSteps:WebDriverFactory
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private static IWebDriver driver = getDriver;
+        private IWebDriver driver = getDriver;
 
 
         [Given(@"I have signed in on the website")]

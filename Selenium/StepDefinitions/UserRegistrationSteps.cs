@@ -14,7 +14,7 @@ namespace Selenium.StepDefinitions
     public class UserRegistrationSteps: Utils.WebDriverFactory
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private static IWebDriver driver = getDriver;
+        private IWebDriver driver = getDriver;
 
         [Given(@"I am on the automation practice website")]
         public void GivenIAmOnTheAutomationPracticeWebsite()
