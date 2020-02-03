@@ -28,7 +28,8 @@ namespace Selenium.StepDefinitions
         [BeforeTestRun]
         public static void InitializeReport()
         {
-            var htmlReporter = new ExtentHtmlReporter(@"C:\Users\tdube\source\repos\Selenium\Selenium\ExtentReport.html");
+            string htmlReportPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug","") + "ExtentReport.html";
+            var htmlReporter = new ExtentHtmlReporter(@htmlReportPath);
             htmlReporter.Configuration().Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             extent = new ExtentReports();
             extent.AttachReporter(htmlReporter);
