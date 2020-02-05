@@ -1,3 +1,8 @@
 # SkeletonSpecflowFramework
 
-Specflow automation framework built with Log4j for logging, JUNIT and Extent reports for reporting
+Specflow automation framework
+-Log4j 
+-JUNIT
+-Extent reports
+
+The report is generated in the directory of the solution in the Selenium folder
