@@ -11,6 +11,8 @@ using TechTalk.SpecFlow;
 namespace Selenium.StepDefinitions
 {
     [Binding]
+
+   
     public class UserRegistrationSteps: Utils.WebDriverFactory
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);

@@ -73,10 +73,10 @@ namespace Selenium.StepDefinitions
                     scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text);
                 else if (stepType == "Then")
                     scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text);
-            }
+            }/*
             else if(s.TestError != null)
             {
-
+                /*
 
                 if(stepType =="Given")
                     scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text).Fail(s.TestError.InnerException);
@@ -90,7 +90,7 @@ namespace Selenium.StepDefinitions
                         
 
                 
-            }
+            }*/
             
         }
 

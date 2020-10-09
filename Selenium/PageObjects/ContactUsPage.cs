@@ -39,7 +39,7 @@ namespace Selenium.PageObjects
         public IWebElement confirmationMsg { get; set; }
 
 
-        public string getConMsg()
+        public string GetConMsg()
         {
             return confirmationMsg.Text.Trim();
         }
